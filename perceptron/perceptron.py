@@ -7,38 +7,46 @@
 # 
 # ### 1.1 What is Machine Learning?
 # 
-# [Machine learning](https://en.wikipedia.org/wiki/Machine_learning) was described by Arthur Samuel as the "field of study that gives computers the ability to learn without being explicitly programmed".  Machine learning is particularly used when the following three principles apply:
+# [Machine learning](https://en.wikipedia.org/wiki/Machine_learning) was described by Arthur Samuel as the "field of study that gives computers the ability to learn without being explicitly programmed".
 # 
-# 1. a pattern exists
-# 2. the pattern cannot be "pinned down" mathematically
-# 3. we have data on that pattern
+# The following three principles are central to Machine Learning:
+# 
+# 1. **a pattern exists**: machine learning will not work on data that is completely random.
+# 2. **the pattern cannot be "pinned down" mathematically**: if a pattern can be pinned down mathematically (for example Newton's equations), it is probably more appropriate to use the original equations
+# 3. **we have data on that pattern**: machine learning algorithms require relevant data, in order to search for patterns in that data.
+# 
+# The last point raises the following question - how much data is needed in order to learn?
 
-# ### 1.2 How much data do we need in order to learn?
+# ### 1.2 The Feasibility of Learning - how much data do we need in order to learn?
 # 
-# Two related concepts can give us insight as to why we are able to learn from data.
+# Two related concepts can give us insight as to why we are able to learn from data, and how does having more data help us to learn--these are [Hoeffding's Inequality](https://en.wikipedia.org/wiki/Hoeffding%27s_inequality) and the [law of large numbers](https://en.wikipedia.org/wiki/Law_of_large_numbers).
 # 
 # #### 1.2.1 Hoeffding's Inequality
 # 
-# For a bin of size $N$, the probability relating the sample frequency, $\nu$, and the bin frequency, $\mu$ is given by [Hoeffding's Inequality](https://en.wikipedia.org/wiki/Hoeffding%27s_inequality):
+# Consider an infinite bin, from which we take a sample of size $N$, which we find to have a sample frequency, $\nu$.  However, the bin frequency, $\mu$, is unknown.  However, **Hoeffding's Inequality** allows us to calculate a probability bound between these two quantities, i.e.:
 # 
 # $$\mathbb{P} \left[ \left| \nu - \mu \right| > \epsilon \right] \le 2e^{-2\epsilon^2 N}$$
 # 
-# It is valid for all $N$ and $\epsilon$ and the bound does not depend on $\mu$.  It illustrates the tradeoff between $N$, $\epsilon$, and the bound.
+# This inequality applies to a *single bin*, and is valid for all $N$ and $\epsilon$ and the bound does not depend on $\mu$.
+# 
+# It illustrates the tradeoff between $N$, $\epsilon$, and the bound, i.e. the larger the sample size, $N$, the smaller our probability bound.  On the other hand, the smaller the tolerance, $\epsilon$, the harder it will be to keep the probability small.
 # 
 # #### 1.2.2 The Law of Large Numbers
 # 
-# The following is the weak [law of large numbers](https://en.wikipedia.org/wiki/Law_of_large_numbers):
+# A related concept is the weak **law of large numbers**, given by:
 # 
 # $$\lim_{m\rightarrow\infty} \mathbb{P} \left[ \left| \underset{X \sim P}{\mathbb{E}}[\mathbf{X}] - \frac{1}{m}\sum\limits_{i=1}^m x_i \right| > \epsilon \right] = 0$$
+# 
+# As the sample size, $m$, approaches infinity, the probability approaches zero.
 # 
 # **Further Reading**:
 # 
 # 1. [Machine Learning Theory - Part 1: Introduction](https://mostafa-samir.github.io/ml-theory-pt1/) | Mostafa Samir
 # 2. [Machine Learning Theory - Part 2: Generalization Bounds](https://mostafa-samir.github.io/ml-theory-pt2/) | Mostafa Samir
-# 
-# Later, we will observe how increasing sample size improves our ability to learn
 
 # ### 1.3 Libraries used in this exercise
+# 
+# The following Python libraries are used in this exercise
 
 # In[1]:
 
@@ -46,8 +54,7 @@ from __future__ import print_function, division
 import numpy as np
 import matplotlib.pyplot as plt
 import itertools
-np.set_printoptions(precision=4)
-#np.set_printoptions(edgeitems=3,infstr='inf',linewidth=75,nanstr='nan',precision=8,suppress=False,threshold=1000,formatter=None)
+np.set_printoptions(edgeitems=3,infstr='inf',linewidth=75,nanstr='nan',precision=4,suppress=False,threshold=1000,formatter=None)
 get_ipython().magic('matplotlib inline')
 
 
@@ -55,11 +62,11 @@ get_ipython().magic('matplotlib inline')
 # 
 # ### 2.1 Learning Boolean Target Function
 # 
-# In this example, we intend to "learn" a Boolean target function.  The function takes in input vector of size 3, say [0, 1, 0] or [0, 1, 1] and outputs a single output, $y_n$, which can be zero or 1.  If we enumerate the set of all possible target functions, we would have $2^{2^3}$ distinct Boolean functions on 3 Boolean inputs.
+# In this example, we intend to "learn" a Boolean target function.  The function takes in input vector of size 3, say [0, 1, 0] or [0, 1, 1] and outputs a single output, $y_n$, which can be zero or 1.  If we enumerate the set of all possible target functions, we would have $2^{2^3}=256$ distinct Boolean functions on 3 Boolean inputs.
 # 
 # In this example, we wish to score 4 different hypotheses, $g_a, g_b, g_c, g_d$ based on how well they perform on "out of sample points".  The scoring system is 1 point per correct point, i.e. if the function gets 3 "out of sample points" correct, it will get a score of 3.  We wish to calcuate the total score when enumerating over the entire set of all possible functions.
 # 
-# Code is as follows:
+# In the code below, the 256 distinct Boolean functions are enumerated using `itertools.product([0,1],repeat=8)` and a score is calculated for each of 4 possible cases.  It is determined that the score for each of these cases is identical.
 
 # In[2]:
 
@@ -100,7 +107,7 @@ print("Scores:\n(a) {}\n(b) {}\n(c) {}\n(d) {}".format(
 # 
 # ### 3.2 Generating Sample Data
 # 
-# The following code generates a three-column random matrix with the first column as ones.
+# To generate the sample data for the perceptron classifier above, a three-column random matrix with the first column as ones is created as follows:
 
 # In[4]:
 
@@ -108,9 +115,8 @@ def generate_data(n,seed=None):
     if seed is not None:
         np.random.seed(seed)
     x0 = np.ones(n)
-    x1 = np.random.uniform(low=-1,high=1,size=n)
-    x2 = np.random.uniform(low=-1,high=1,size=n)
-    return np.vstack((x0,x1,x2)).T
+    x1 = np.random.uniform(low=-1,high=1,size=(2,n))
+    return np.vstack((x0,x1)).T
 
 
 # ### 3.3 Creating a random line inside the region of interest
@@ -118,7 +124,7 @@ def generate_data(n,seed=None):
 # The region of interest is $\mathcal{X}=\left[-1,1\right] \times \left[-1,1\right]$,
 # where $\times$ denotes the [Cartesian Product](https://en.wikipedia.org/wiki/Cartesian_product).
 # 
-# To ensure that the random line falls within the region of interest, two points, $(x_0,y_0)$ and $(x_1,y_1)$ are generated within $\mathcal{X}$.
+# A random line is created, and to ensure that it falls within the region of interest, it is created from two random points, $(x_0,y_0)$ and $(x_1,y_1)$ which are generated within $\mathcal{X}$.  The equation for this line in *slope-intercept* form and in the *hypothesis / weights* form are derived as follows.
 # 
 # #### 3.3.1 Equation of the random line in the slope-intercept form, $y = mx + c$
 # 
@@ -160,15 +166,17 @@ def get_random_line(seed=None):
     y = X[:,2]
     m = (y[1]-y[0])/(x[1]-x[0])
     c = y[0] - m*x[0]
-    w = np.array([-c,-m,1])
-    return w
+    return np.array([-c,-m,1])
 
-def draw_random_line(ax,w,marker='g--'):
+def draw_line(ax,w,marker='g--',label=None):
     m = -w[1]/w[2]
     c = -w[0]/w[2]
     x = np.linspace(-1,1,20)
     y = m*x + c
-    ax.plot(x,y,marker)
+    if label is None:
+        ax.plot(x,y,marker)
+    else:
+        ax.plot(x,y,marker,label=label)
     
 def get_hypothesis(X,w):
     h=np.dot(X,w)
@@ -177,33 +185,33 @@ def get_hypothesis(X,w):
 
 # ### 3.4 Generating a Training Dataset
 # 
-# The following code generates a training dataset and plots it
+# The following code generates a training dataset (separated into positive and negative classes according to a random line in $\mathcal{X}$) and plots it.
 
 # In[6]:
 
 def plot_data(fig,plot_id,X,y=None,w_arr=None,my_x=None,title=None):
     ax = fig.add_subplot(plot_id)
     if y is None:
-        ax.plot(X,y,'gx')
+        ax.plot(X[:,1],X[:,2],'gx')
     else:
         ax.plot(X[y > 0,1],X[y > 0,2],'b+',label='Positive (+)')
         ax.plot(X[y < 0,1],X[y < 0,2],'ro',label='Negative (-)')
     ax.set_xlim(-1,1)
     ax.set_ylim(-1,1)
-    ax.grid()
-    ax.legend(loc='best',frameon=True)
+    ax.grid(True)
     if w_arr is not None:
         if isinstance(w_arr,list) is not True:
             w_arr=[w_arr]
         for i,w in enumerate(w_arr):
             if i==0:
-                draw_random_line(ax,w,'g-')
+                draw_line(ax,w,'g-',label='Theoretical')
             else:
-                draw_random_line(ax,w,'g--')
+                draw_line(ax,w,'g--')
     if my_x is not None:
         ax.plot([my_x[0]],[my_x[1]],'kx',markersize=10)
     if title is not None:
         ax.set_title(title)
+    ax.legend(loc='best',frameon=True)
 
 
 # In[7]:
@@ -215,7 +223,7 @@ def create_dataset(N,make_plot=True,seed=None):
     if make_plot is True:
         fig = plt.figure(figsize=(7,5))
         plot_data(fig,111,X,y,w_theoretical,title="Initial Dataset")
-    return(X,y,w_theoretical)
+    return X,y,w_theoretical
 
 
 # ### 3.5 The Perceptron Learning Algorithm
@@ -226,6 +234,8 @@ def create_dataset(N,make_plot=True,seed=None):
 # 2. Compare $h\left(\mathbf{x}\right)$ with $y$ to find misclassified point(s) if any.
 # 3. Pick one misclassified point at random.
 # 4. Iterate the weights according to the PLA: $w = w + y_n x_n$, where $y_n$ is the correct classification for the misclassified point, and $x_n$ is the misclassified point.
+# 
+# The code below also keeps track of the weights, misclassification error, and misclassified point at each iteration.
 
 # In[8]:
 
@@ -260,6 +270,8 @@ def PLA(w,X,y0,n_iterations=10,verbose=True):
 
 
 # ### 3.6 Implementing the PLA
+# 
+# Here, we generate a sample dataset of 10 points and plot it.  The perceptron learning algorithm, starting from an initial weight of $(0,0,0)$, converges in less than 10 iterations.
 
 # In[9]:
 
@@ -300,6 +312,8 @@ plot_convergence(m_arr)
 
 
 # ### 3.7 Number of iterations required for convergence
+# 
+# The following code calculates the number of iterations required for convergence and plots its distribution.
 
 # In[13]:
 
@@ -333,7 +347,7 @@ plot_histogram(n_iterations,bins=200,x_max=50)
 
 # ### 3.8 Calculate the misclassification error for the converged weights
 # 
-# Here, we calculate the number of points misclassified by `w` (after convergence).  The variable `w_theoretical` is used to obtain the correct classifications for the points.
+# If we know the theoretical decision boundary, `w_theoretical`, that 'knows' the correct classification of points, we can calculate the number of points misclassified by `w` (the final weights after convergence using the PLA) via random sampling.  The misclassification error is slightly less than 20%.
 
 # In[15]:
 
@@ -390,6 +404,8 @@ def get_misclassification_distribution(N=10,n_trials=1000,max_iterations=10000,s
 
 
 # ### 3.9 Iteration distribution and misclassification distribution for N=10
+# 
+# Here, we find that for $N$=10, an average of about 10 iterations is required for convergence.  The average misclassification error is about 10%.
 
 # In[19]:
 
@@ -404,6 +420,8 @@ plot_misclassification(misclassification,bins=20,x_max=0.4)
 
 
 # ### 3.10 Iteration distribution and misclassification distribution for N=100
+# 
+# For $N$=100, an average of about 80~100 iterations is required for convergence.  The average misclassification error is slightly over ~1%.
 
 # In[21]:
 
