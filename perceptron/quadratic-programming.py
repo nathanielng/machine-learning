@@ -426,7 +426,7 @@ def solve_quadratic_programming(X,y,tol=1.0e-8,method='solve_qp'):
         return alphas
 
 
-# Here, the qudar
+# Here, the quadratic programming code is tested on a handful of 'toy problems'
 
 # In[15]:
 
