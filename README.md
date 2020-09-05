@@ -1,4 +1,6 @@
-# Machine Learning & Algorithms
+# [Machine Learning & Algorithms](https://nathanielng.github.io/machine-learning)
+
+## [Learning from Data](https://work.caltech.edu/telecourse) | Caltech
 
 1. [The Perceptron](https://nathanielng.github.io/machine-learning/perceptron/perceptron.html)
 2. [Linear Regression](https://nathanielng.github.io/machine-learning/perceptron/linearregression.html)
