@@ -7,3 +7,9 @@
 5. [Regularization](https://nathanielng.github.io/machine-learning/perceptron/regularization.html)
 6. [Quadratic Programming](https://nathanielng.github.io/machine-learning/perceptron/quadratic-programming.html)
 7. [Digit Recognition](https://nathanielng.github.io/machine-learning/perceptron/digit-recognition.html)
+
+<br>
+
+View this repository's Jupyter Notebooks in Colab
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nathanielng/machine-learning)
