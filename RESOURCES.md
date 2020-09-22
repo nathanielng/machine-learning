@@ -12,6 +12,7 @@ and those which are frequently recommended by others.
 
 1. Introduction to Statistical Learning - with applications in R, by Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani: [http://faculty.marshall.usc.edu/gareth-james/ISL/](http://faculty.marshall.usc.edu/gareth-james/ISL/)
 2. The Elements of Statistical Learning, by Trevor Hastie, Robert Tibshirani, and Jerome Friedman: [https://web.stanford.edu/~hastie/ElemStatLearn/](https://web.stanford.edu/~hastie/ElemStatLearn/)
+3. Think Bayes - Bayesian Statistics Made Simple, by Allen B. Downey [https://greenteapress.com/wp/think-bayes/](https://greenteapress.com/wp/think-bayes/)
 
 **Course**
 
@@ -30,5 +31,4 @@ Lastly, *Seeing Theory* has an excellent series of visualisations for explaining
 
 These are other books that I have come across, and will be reviewing them to see if they should be placed in the recommended list. 
 
-1. Think Stats - Probability and Statistics for Programmers: [http://greenteapress.com/thinkstats/thinkstats.pdf](http://greenteapress.com/thinkstats/thinkstats.pdf)
-2. Think Stats - Exploratory Data Analysis in Python: [http://greenteapress.com/thinkstats2/thinkstats2.pdf](http://greenteapress.com/thinkstats2/thinkstats2.pdf)
+1. Think Stats - Exploratory Data Analysis in Python, by Allen B. Downey: [https://greenteapress.com/wp/think-stats-2e/](https://greenteapress.com/wp/think-stats-2e/). [PDF](http://greenteapress.com/thinkstats2/thinkstats2.pdf). This book has a first edition: [Think Stats - Probability and Statistics for Programmers](http://greenteapress.com/thinkstats/index.html). [CC BY-NC 3.0](http://creativecommons.org/licenses/by-nc/3.0/)
