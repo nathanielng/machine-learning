@@ -18,4 +18,4 @@ View this repository's Jupyter Notebooks in Colab
 
 ## Resources
 
-- [https://github.com/nathanielng/machine-learning/RESOURCES.md](https://github.com/nathanielng/machine-learning/RESOURCES.md)
+- [https://nathanielng.github.io/machine-learning/RESOURCES](https://nathanielng.github.io/machine-learning/RESOURCES)
