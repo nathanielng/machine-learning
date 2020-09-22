@@ -25,3 +25,10 @@ I have seen many recommendations for the books *Introduction to Statistical Lear
 and *The Elements of Statistical Learning* (ESL). The *Statistics: The Complete Mini-Course* is included because
 it gives a good introduction without the technical jargon, and has a strong focus on concepts and applications.
 Lastly, *Seeing Theory* has an excellent series of visualisations for explaining concepts in statistics.
+
+### 1.2 Under Review
+
+These are other books that I have come across, and will be reviewing them to see if they should be placed in the recommended list. 
+
+1. Think Stats - Probability and Statistics for Programmers: [http://greenteapress.com/thinkstats/thinkstats.pdf](http://greenteapress.com/thinkstats/thinkstats.pdf)
+2. Think Stats - Exploratory Data Analysis in Python: [http://greenteapress.com/thinkstats2/thinkstats2.pdf](http://greenteapress.com/thinkstats2/thinkstats2.pdf)
