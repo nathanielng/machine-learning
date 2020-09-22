@@ -15,3 +15,7 @@
 View this repository's Jupyter Notebooks in Colab
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nathanielng/machine-learning)
+
+## Resources
+
+- [https://github.com/nathanielng/machine-learning/RESOURCES.md](https://github.com/nathanielng/machine-learning/RESOURCES.md)
