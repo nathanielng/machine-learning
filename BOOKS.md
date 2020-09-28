@@ -1,7 +1,30 @@
 # Books
 
-1. An Introduction to Statistical Learning - with applications in R | Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani: http://www-bcf.usc.edu/~gareth/ISL/
-2. Automated Machine Learning | Frank Hutter, Lars Kotthoff, Joaquin Vanschoren (open access): https://link.springer.com/book/10.1007/978-3-030-05318-5
-3. Bayesian Data Analysis | Andrew Gelman, John Carlin, Hal Stern, David Dunson, Aki Vehtari, and Donald Rubin: https://users.aalto.fi/~ave/BDA3.pdf
-4. Bayesian Methods for Hackers: Probabilistic Programming and Bayesian Inference | Davidson-Pilon Cameron: http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/
-5. Computational and Inferential Thinking | Ani Adhikari and John DeNero: https://www.inferentialthinking.com/chapters/intro (CC BY-NC-ND 4.0)
+1. An Introduction to Statistical Learning - with applications in R \| Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani: http://www-bcf.usc.edu/~gareth/ISL/
+2. Automated Machine Learning \| Frank Hutter, Lars Kotthoff, Joaquin Vanschoren (open access): https://link.springer.com/book/10.1007/978-3-030-05318-5
+3. Bayesian Data Analysis \| Andrew Gelman, John Carlin, Hal Stern, David Dunson, Aki Vehtari, and Donald Rubin: https://users.aalto.fi/~ave/BDA3.pdf
+4. Bayesian Methods for Hackers: Probabilistic Programming and Bayesian Inference \| Davidson-Pilon Cameron: http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/
+5. Computational and Inferential Thinking \| Ani Adhikari and John DeNero: https://www.inferentialthinking.com/chapters/intro (CC BY-NC-ND 4.0)
+6. Deep Learning \| Ian Goodfellow, Yoshua Bengio and Aaron Courville: http://www.deeplearningbook.org/ (html)
+7. Deep Learning with PyTorch \| PyTorch: https://pytorch.org/deep-learning-with-pytorch (free for limited time)
+8. Dive into Deep Learning \| Aston Zhang, Zachary C. Lipton, Mu Li and Alexander J. Smola \| Amazon: http://d2l.ai. Links: [Course](http://courses.d2l.ai/berkeley-stat-157/index.html), [Github](https://github.com/d2l-ai/d2l-en), [Twitter](https://twitter.com/D2L_ai)
+9. Forecasting: Principles and Practice \| Rob J Hyndman and George Athanasopoulos: https://otexts.com/fpp2/
+10. From Algorithms to Z-Scores: Probabilistic and Statistical Modeling in Computer Science | Norm Matloff: http://heather.cs.ucdavis.edu/~matloff/probstatbook.html
+11. Fundamentals of Data Visualization \| Claus O. Wilke: https://serialmentor.com/dataviz/
+12. Interpretable Machine Learning - A Guide for Making Black Box Models Explainable | Christoph Molnar: https://christophm.github.io/interpretable-ml-book/
+13. Introduction to Probability (2nd Ed) \| Blitzstein and Hwang: http://probabilitybook.net. [Course](https://projects.iq.harvard.edu/stat110/home)
+14. Limitations of Interpretable Machine Learning Methods: https://compstat-lmu.github.io/iml_methods_limitations/ (CC BY-NC-SA 4.0)
+15. Linear Models with R \| Julian J. Faraway: https://jdong.weebly.com/uploads/3/8/5/2/38520479/linmodwitrsecedi.pdf
+16. Machine Learning for Algorithmic Trading: Predictive models to extract signals from market and alternative data for systematic trading strategies with Python, 2nd Edition \| Stefan Jansen: https://github.com/stefan-jansen/machine-learning-for-trading
+17. Machine Learning from Scratch - Derivations in Concept and Code \| Danny Friedman: https://dafriedman97.github.io/mlbook/content/introduction.html
+18. Machine Learning Yearning \| Andrew Ng: https://www.deeplearning.ai/machine-learning-yearning/
+19. Mathematics for Machine Learning \| Marc Peter Deisenroth, A. Aldo Faisal, and Cheng Soon Ong: https://mml-book.com/. [Github](https://mml-book.github.io/)
+20. Modeling with Data \| Ben Klemens: https://ben.klemens.org/pdfs/gsl_stats.pdf
+21. Natural Language Processing with Python – Analyzing Text with the Natural Language Toolkit \| Steven Bird, Ewan Klein, and Edward Loper: https://www.nltk.org/book/ (CC BY-NC-ND 3.0 US)
+22. Python Data Science Handbook \| Jake VanderPlas: https://jakevdp.github.io/PythonDataScienceHandbook/
+23. R for Data Science \| Hadley Wickham \| O'Reilly: http://r4ds.had.co.nz/index.html
+24. Seeing Theory: https://seeing-theory.brown.edu/index.html
+25. The Data Engineering Cookbook - Mastering The Plumbing of Data Science \| Andreas Kretz: https://github.com/andkret/Cookbook/blob/LaTex-Version-Deprecated/Data%20Engineering%20Cookbook.pdf. Latest version [on Github](https://github.com/andkret/Cookbook)
+26. The Elements of Statistical Learning (2nd Ed) \| Trevor Hastie, Robert Tibshirani, and Jerome Friedman: https://web.stanford.edu/~hastie/ElemStatLearn/
+27. Think Bayes \| Alan B. Downey: https://greenteapress.com/wp/think-bayes/
+28. Think Stats - A Programming Guide with Probability and Statistics \| Alan B. Downey: http://www.techleer.com/articles/246-a-programming-guide-with-probability-and-statistics/
