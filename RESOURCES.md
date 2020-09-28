@@ -32,3 +32,7 @@ Lastly, *Seeing Theory* has an excellent series of visualisations for explaining
 These are other books that I have come across, and will be reviewing them to see if they should be placed in the recommended list. 
 
 1. Think Stats - Exploratory Data Analysis in Python, by Allen B. Downey: [https://greenteapress.com/wp/think-stats-2e/](https://greenteapress.com/wp/think-stats-2e/). [PDF](http://greenteapress.com/thinkstats2/thinkstats2.pdf). This book has a first edition: [Think Stats - Probability and Statistics for Programmers](http://greenteapress.com/thinkstats/index.html). [CC BY-NC 3.0](http://creativecommons.org/licenses/by-nc/3.0/)
+
+### 1.3 Full List of Books
+
+The full list of books is available [here](http://nathanielng.github.io/machine-learning/BOOKS)
