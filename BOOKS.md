@@ -9,7 +9,7 @@
 7. Deep Learning with PyTorch \| PyTorch: [https://pytorch.org/deep-learning-with-pytorch](https://pytorch.org/deep-learning-with-pytorch) (free for limited time)
 8. Dive into Deep Learning \| Aston Zhang, Zachary C. Lipton, Mu Li and Alexander J. Smola \| Amazon: [http://d2l.ai](http://d2l.ai). Links: [Course](http://courses.d2l.ai/berkeley-stat-157/index.html), [Github](https://github.com/d2l-ai/d2l-en), [Twitter](https://twitter.com/D2L_ai)
 9. Forecasting: Principles and Practice \| Rob J Hyndman and George Athanasopoulos: [https://otexts.com/fpp2/](https://otexts.com/fpp2/)
-10. Foundations of Data Science \| Avrim Blum, John Hopcroft, and Ravindran Kannan: [https://www.microsoft.com/en-us/research/publication/foundations-of-data-science-2/](https://www.microsoft.com/en-us/research/video/foundations-of-ds/) [PDF](https://www.cs.cornell.edu/jeh/book.pdf).
+10. Foundations of Data Science \| Avrim Blum, John Hopcroft, and Ravindran Kannan: [https://www.microsoft.com/en-us/research/publication/foundations-of-data-science-2/](https://www.microsoft.com/en-us/research/publication/foundations-of-data-science-2/) [PDF](https://www.cs.cornell.edu/jeh/book.pdf).
 11. From Algorithms to Z-Scores: Probabilistic and Statistical Modeling in Computer Science \| Norm Matloff: [http://heather.cs.ucdavis.edu/~matloff/probstatbook.html](http://heather.cs.ucdavis.edu/~matloff/probstatbook.html)
 12. Fundamentals of Data Visualization \| Claus O. Wilke: [https://serialmentor.com/dataviz/](https://serialmentor.com/dataviz/)
 13. Interpretable Machine Learning - A Guide for Making Black Box Models Explainable \| Christoph Molnar: [https://christophm.github.io/interpretable-ml-book/](https://christophm.github.io/interpretable-ml-book/)
